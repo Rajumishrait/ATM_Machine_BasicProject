@@ -10,12 +10,12 @@ public class AtmMachine {
     public static void main(String args[]) {
         in = new Scanner(System.in);
 
-        // call our transaction method here
+        // Call our transaction Method here
         transaction();
     }
 
     private static void transaction() {
-        // here is where most of the work is
+        // All work is here
 
         int choice;
 
@@ -32,11 +32,11 @@ public class AtmMachine {
                 System.out.println("Please enter amount to withdraw: ");
                 amount = in .nextFloat();
                 if (amount > balance || amount == 0) {
-                    System.out.println("You have insufficient Balence\n\n");
+                    System.out.println("You have insufficient Balance\n\n");
                     anotherTransaction(); // ask if they want another transaction
                 } else {
                     // they have some cash
-                    // update balance
+                    // Update balance
                     balance = balance - amount;
                     System.out.println("You have withdrawn " + amount + " and your new balance is " + balance + "\n");
                     anotherTransaction();
@@ -44,7 +44,7 @@ public class AtmMachine {
                 break;
 
             case 2:
-                // option number 2 is depositing
+                // Option 2 is Depositing Amount
                 float deposit;
                 System.out.println("Please enter amount you would wish to deposit: ");
                 deposit = in .nextFloat();
@@ -55,7 +55,7 @@ public class AtmMachine {
                 break;
 
             case 3:
-                // this option is to check balance
+                // check balance
                 System.out.println("Your balance is " + balance + "\n");
                 anotherTransaction();
                 break;
@@ -72,7 +72,8 @@ public class AtmMachine {
         System.out.println("Do you want another transaction?\n\nPress 1 for another transaction\n2 To exit");
         anotherTransaction = in .nextInt();
         if (anotherTransaction == 1) {
-            transaction(); // call transaction method
+             // call transaction method
+            transaction();
         } else if (anotherTransaction == 2) {
             System.out.println("Thanks for Using My Code. Bye Bye!..");
         } else {
